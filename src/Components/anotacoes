@@ -1,3 +1,9 @@
 {`${
         modal ? 'h-auto' : 'h-[60px]'
       }flex justify-center p-8 items-center shadow-sm shadow-black gap-4 w-full`}
+
+      <div className="animeLeft flex flex-col absolute z-10 bg-[#020713] h-auto rounded-lg pb-8 md:pb-0 top-[70px] pl-3 left-0 items-start md:items-center gap-6 md:gap-6 md:flex-row md:static lg:items-center">
+          {menu.map((item, index) => (
+            <HeaderItem key={index} item={item.name} Icon={item.icon} />
+          ))}
+        </div>

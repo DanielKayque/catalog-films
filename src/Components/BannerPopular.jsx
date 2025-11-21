@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../Services/GlobalAPI';
 import PopularMovies from './PopularMovies';
 
-const Popular = () => {
+const BannerPopular = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ const Popular = () => {
   );
 };
 
-export default Popular;
+export default BannerPopular;

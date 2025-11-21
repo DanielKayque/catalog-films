@@ -16,9 +16,12 @@ const HeaderItem = ({ item, Icon }) => {
   }
 
   return (
-    <Link to={path} className="flex gap-2 justify-center items-center">
+    <Link
+      to={path}
+      className="flex mr-4 gap-1 md:text-2xl lg:text-[16px] justify-center items-center"
+    >
       <Icon />
-      <h2>{item}</h2>
+      <h2 className="block md:hidden lg:block">{item}</h2>
     </Link>
   );
 };

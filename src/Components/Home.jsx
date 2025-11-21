@@ -1,11 +1,11 @@
 import React from 'react';
-import Popular from './Popular';
 import Trending from './Trending';
+import BannerPopular from './BannerPopular';
 
 const Home = () => {
   return (
     <div className="h-auto w-full overflow-hidden box-border">
-      <Popular />
+      <BannerPopular />
       <Trending />
     </div>
   );

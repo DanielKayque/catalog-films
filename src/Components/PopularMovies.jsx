@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { api } from '../Services/GlobalAPI';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
-import styles from './PopularMovies.module.css'
+import styles from './PopularMovies.module.css';
 
 const { imgPosterUrl } = api;
 
@@ -28,7 +28,7 @@ const PopularMovies = ({ movies }) => {
   return (
     <div
       ref={elementRef}
-      className={`flex overflow-x-auto scrollbar-hide h-[610px] w-svw shrink-0`}
+      className={`flex overflow-x-auto scrollbar-hide h-[610px] p-10 gap-4 w-svw shrink-0`}
     >
       <FaArrowLeft
         onClick={handleLeft}
@@ -38,14 +38,14 @@ const PopularMovies = ({ movies }) => {
         onClick={handleRight}
         className="absolute hidden md:block text-4xl right-0 top-[305px] cursor-pointer bg-[#2a2a2a] p-2 mr-4 rounded-[50%]"
       />
-      {movies.slice(0, 6).map((movie) => (
-        <img
-          className=" rounded-2xl min-w-full object-cover lg:object-left-top"
-          key={movie.id}
-          src={`${imgPosterUrl}${movie.backdrop_path}`}
-          alt={movie.title}
-        ></img>
-      ))}
+        {movies.slice(0, 6).map((movie) => (
+          <img
+            className="border-2 border-transparent hover:border-2 hover:border-gray-100 transition-all duration-200 rounded-xl shadow-xl shadow-black min-w-full object-cover lg:object-left-top"
+            key={movie.id}
+            src={`${imgPosterUrl}${movie.backdrop_path}`}
+            alt={movie.title}
+          />
+        ))}
     </div>
   );
 };
