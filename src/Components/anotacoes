@@ -1,0 +1,3 @@
+{`${
+        modal ? 'h-auto' : 'h-[60px]'
+      }flex justify-center p-8 items-center shadow-sm shadow-black gap-4 w-full`}
