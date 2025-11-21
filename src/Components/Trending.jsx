@@ -13,8 +13,14 @@ const Trending = () => {
 
   const [movies, setMovies] = useState();
   console.log(movies);
+  
 
-  return <main >{movies && <TrendingMovies movies={movies} />}</main>;
+  return (
+    <main className='relative'>
+      <h1 className='py-4 px-8 text-2xl font-semibold'>Trending Tops</h1>
+      {movies && <TrendingMovies movies={movies} />}
+    </main>
+  );
 };
 
 export default Trending;

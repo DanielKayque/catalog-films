@@ -29,7 +29,7 @@ async function moviePopular() {
 }
 
 async function searchId(id){
-  const data = await request(`${movieURL}/movie${id}`, options)
+  const data = await request(`${movieURL}/movie/${id}`, options)
   return data
 }
 

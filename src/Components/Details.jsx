@@ -1,20 +1,18 @@
 import React from 'react';
 import { api } from '../Services/GlobalAPI';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 const { searchId } = api;
 
 const Details = () => {
+  const params = useParams();
   React.useEffect(() => {
     async function searchForId() {
-      const data = await searchId(pathname);
+      const data = await searchId(params.id);
       console.log(data);
     }
     searchForId();
   }, []);
-
-  const { pathname } = useLocation();
-  console.log(pathname);
 
   return <div>Details</div>;
 };
