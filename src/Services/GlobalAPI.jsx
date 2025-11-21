@@ -1,7 +1,7 @@
 const API_KEY = import.meta.env.VITE_TMDB_TOKEN;
 
 const movieURL = 'https://api.themoviedb.org/3';
-const imgUrl = 'https://image.tmdb.org/t/p/w200/';
+const imgUrl = 'https://image.tmdb.org/t/p/w300/';
 const imgPosterUrl = 'https://image.tmdb.org/t/p/original/';
 
 const options = {

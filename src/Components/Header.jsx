@@ -28,7 +28,7 @@ const Header = () => {
     <header
       className={`${
         modal ? 'pb-24' : 'h-[60px]'
-      } flex justify-between p-8 items-center shadow-sm shadow-black gap-4 w-full`}
+      } flex justify-between bg-transparent absolute z-20 p-8 items-center shadow-md shadow-gray-950 gap-4 w-full`}
     >
       <h2>
         <span className="text-blue-600">Niel</span>Films

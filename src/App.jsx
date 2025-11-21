@@ -7,7 +7,6 @@ import Filmes from './Components/Filmes';
 import Series from './Components/Series';
 
 const App = () => {
-
   return (
     <div>
       <BrowserRouter>

@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { api } from '../Services/GlobalAPI';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
-import style from './PopularMovies.module.css'
+import styles from './PopularMovies.module.css'
+
 const { imgPosterUrl } = api;
 
 const PopularMovies = ({ movies }) => {
@@ -27,7 +28,7 @@ const PopularMovies = ({ movies }) => {
   return (
     <div
       ref={elementRef}
-      className={`${style.noscroll} flex overflow-x-auto no-scrollbar h-[610px] w-svw shrink-0`}
+      className={`flex overflow-x-auto scrollbar-hide h-[610px] w-svw shrink-0`}
     >
       <FaArrowLeft
         onClick={handleLeft}
@@ -39,7 +40,7 @@ const PopularMovies = ({ movies }) => {
       />
       {movies.slice(0, 6).map((movie) => (
         <img
-          className=" rounded-2xl min-w-full object-cover object-left-top"
+          className=" rounded-2xl min-w-full object-cover lg:object-left-top"
           key={movie.id}
           src={`${imgPosterUrl}${movie.backdrop_path}`}
           alt={movie.title}
