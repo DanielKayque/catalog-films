@@ -7,17 +7,6 @@ import Filmes from './Components/Filmes';
 import Series from './Components/Series';
 
 const App = () => {
-  const [filmes, setFilmes] = useState([]);
-
-  console.log(filmes);
-
-  useEffect(() => {
-    async function TrendingTop() {
-      const data = await api.movieTrendings();
-      setFilmes(data.results);
-    }
-    TrendingTop();
-  }, []);
 
   return (
     <div>

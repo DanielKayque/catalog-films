@@ -1,9 +1,10 @@
 import React from 'react';
+import Popular from './Popular';
 
 const Home = () => {
   return (
-    <div className="h-svh w-svw overflow-hidden box-border">
-      Aqui é o content da Home
+    <div className="h-auto w-full overflow-hidden box-border">
+      <Popular />
     </div>
   );
 };
