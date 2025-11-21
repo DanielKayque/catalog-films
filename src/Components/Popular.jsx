@@ -14,7 +14,7 @@ const Popular = () => {
   }, []);
 
   return (
-    <main className=''>
+    <main className='relative'>
       {movies && <PopularMovies movies={movies} />}
     </main>
   );
