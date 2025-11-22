@@ -2,23 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HeaderItem = ({ item, Icon }) => {
-  let path = '';
-  switch (item) {
-    case 'HOME':
-      path = '/';
-      break;
-    case 'FILMES':
-      path = '/filmes';
-      break;
-    case 'SERIES':
-      path = '/series';
-      break;
-  }
+  // let path = '';
+  // switch (item) {
+  //   case 'HOME':
+  //     path = '/';
+  //     break;
+  //   case 'FILMES':
+  //     path = '/filmes';
+  //     break;
+  //   case 'SERIES':
+  //     path = '/series';
+  //     break;
+  // }
 
   return (
     <Link
-      to={path}
-      className="flex mr-4 gap-1 md:text-2xl lg:text-[16px] justify-center items-center"
+      to="/"
+      className="flex mr-4 gap-1 md:text-2xl lg:text-[16px] justify-center items-center underline-grow"
     >
       <Icon />
       <h2 className="block md:hidden lg:block">{item}</h2>

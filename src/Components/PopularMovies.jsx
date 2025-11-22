@@ -28,15 +28,15 @@ const PopularMovies = ({ movies }) => {
   return (
     <div
       ref={elementRef}
-      className={`flex overflow-x-auto scrollbar-hide h-[610px] p-10 gap-4 w-svw shrink-0`}
+      className={`flex overflow-x-auto scrollbar-hide md:h-[610px] p-10 gap-4 w-svw shrink-0`}
     >
       <FaArrowLeft
         onClick={handleLeft}
-        className="absolute hidden md:block text-4xl left-0 top-[305px] cursor-pointer bg-[#2a2a2a] p-2 ml-4 rounded-[50%]"
+        className="seta-esquerda"
       />
       <FaArrowRight
         onClick={handleRight}
-        className="absolute hidden md:block text-4xl right-0 top-[305px] cursor-pointer bg-[#2a2a2a] p-2 mr-4 rounded-[50%]"
+        className="seta-direita"
       />
         {movies.slice(0, 6).map((movie) => (
           <img

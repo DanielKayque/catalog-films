@@ -17,7 +17,7 @@ const Trending = () => {
 
   return (
     <main className='relative'>
-      <h1 className='py-4 px-8 text-2xl font-semibold'>Trending Tops</h1>
+      <h1 className='pb-6 px-8 text-2xl font-semibold'>Trending Tops</h1>
       {movies && <TrendingMovies movies={movies} />}
     </main>
   );

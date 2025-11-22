@@ -23,6 +23,33 @@ body{
   animation: animeLeft .3s ease forwards;
 }
 
+@layer utilities {
+  .underline-grow{
+    @apply relative;
+  }
+  .underline-grow::after{
+    content: "";
+    @apply absolute h-[1.5px] bg-white w-full left-0 bottom-0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: left;
+  }
+    .underline-grow:hover::after{
+      transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .seta-direita{
+    @apply absolute hidden md:block text-4xl right-0 top-[50%] cursor-pointer bg-[#2a2a2a] p-2 mr-8 rounded-[50%] hover:bg-[#020713]
+  }
+    
+  .seta-esquerda{
+    @apply absolute hidden md:block text-4xl left-0 top-[50%] cursor-pointer bg-[#2a2a2a] p-2 ml-8 rounded-[50%] hover:bg-[#020713]
+  }
+}
+
+
 @keyframes animeLeft {
   to{
     transform: translateX(0);
