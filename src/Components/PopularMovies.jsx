@@ -9,7 +9,6 @@ const { imgPosterUrl } = api;
 const PopularMovies = ({ movies }) => {
   const elementRef = useRef(null);
   const width = window.innerWidth;
-  console.log(width);
 
   const handleRight = () => {
     elementRef.current.scrollBy({

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { api } from './Services/GlobalAPI';
+import React from 'react';
 import Home from './Components/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';

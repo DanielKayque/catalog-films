@@ -1,28 +1,11 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { api } from '../Services/GlobalAPI';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
+import { api } from '../Services/GlobalAPI';
 
-const { imgUrl } = api;
-
-const TrendingMovies = ({ movies }) => {
-  const elementRef = useRef(null);
-  const width = window.innerWidth;
-
-  const handleRight = () => {
-    elementRef.current.scrollBy({
-      left: 316,
-      behavior: 'smooth',
-    });
-  };
-
-  const handleLeft = () => {
-    elementRef.current.scrollBy({
-      left: -316,
-      behavior: 'smooth',
-    });
-  };
+const NowPlayingItems = ({ movies }) => {
+  const {imgUrl} = api
 
   return (
     <div
@@ -47,4 +30,4 @@ const TrendingMovies = ({ movies }) => {
   );
 };
 
-export default TrendingMovies;
+export default NowPlayingItems;

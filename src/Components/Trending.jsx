@@ -12,7 +12,6 @@ const Trending = () => {
   }, []);
 
   const [movies, setMovies] = useState();
-  console.log(movies);
   
 
   return (
