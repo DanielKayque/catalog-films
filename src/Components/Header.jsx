@@ -6,6 +6,7 @@ import { IoMdAdd, IoMdStar } from 'react-icons/io';
 import { FaSearch } from 'react-icons/fa';
 import { MdLocalMovies } from 'react-icons/md';
 import { FiTv } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [modal, setModal] = useState(false);
@@ -49,12 +50,18 @@ const Header = () => {
         />
       </button>
       <div className="h-auto flex ">
-        <img
-          src="https://logodownload.org/wp-content/uploads/2020/11/disney-plus-logo-5.png"
-          className="w-[80px] md:block mr-14 h-auto object-contain "
-          alt=""
-        />
-        <div className={`${modal ? 'flex' : 'hidden'} md:flex md:flex-row animeLeft flex-col absolute z-10 bg-[#020713] h-auto rounded-lg pb-8 md:pb-0 top-[70px] pl-3 left-0 items-start md:items-center gap-6 md:gap-6 md:static lg:items-center`}>
+        <Link to="/">
+          <img
+            src="https://logodownload.org/wp-content/uploads/2020/11/disney-plus-logo-5.png"
+            className="w-[80px] md:block mr-14 h-auto object-contain "
+            alt=""
+          />
+        </Link>
+        <div
+          className={`${
+            modal ? 'flex' : 'hidden'
+          } md:flex md:flex-row animeLeft flex-col absolute z-10 bg-[#020713] h-auto rounded-lg pb-8 md:pb-0 top-[70px] pl-3 left-0 items-start md:items-center gap-6 md:gap-6 md:static lg:items-center`}
+        >
           {menu.map((item, index) => (
             <HeaderItem key={index} item={item.name} Icon={item.icon} />
           ))}
