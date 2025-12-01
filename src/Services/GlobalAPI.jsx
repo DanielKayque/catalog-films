@@ -28,16 +28,23 @@ async function moviePopular() {
   return data;
 }
 
-async function searchId(id){
-  const data = await request(`${movieURL}/movie/${id}`, options)
-  return data
+async function searchId(id) {
+  const data = await request(`${movieURL}/movie/${id}`, options);
+  return data;
 }
+
+async function nowPlaying() {
+  const data = await request(movieURL + '/movie/now_playing', options);
+  return data;
+}
+
 
 export const api = {
   movieTrendings,
   movieURL,
   imgUrl,
   moviePopular,
+  nowPlaying,
   imgPosterUrl,
-  searchId
+  searchId,
 };

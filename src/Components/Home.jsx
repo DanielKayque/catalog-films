@@ -2,6 +2,7 @@ import React from 'react';
 import Trending from './Trending';
 import BannerPopular from './BannerPopular';
 import Animations from './Animations';
+import NowPlaying from './NowPlaying';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <BannerPopular />
       <Animations />
       <Trending />
+      <NowPlaying />
     </div>
   );
 };

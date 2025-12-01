@@ -33,9 +33,9 @@ const TrendingMovies = ({ movies }) => {
       <FaArrowRight onClick={handleRight} className="seta-direita" />
       {movies.slice(0, 10).map((movie) => (
         <Link key={movie.id} to={`/filme/${movie.id}`}>
-          <div className="rounded-lg min-w-[300px] hover:border-[3px] hover:border-white duration-100 ease-in-out shadow-lg shadow-black">
+          <div className="rounded-lg w-[150px] md:w-[300px] h-auto hover:border-[3px] hover:border-white duration-100 ease-in-out shadow-lg shadow-black">
             <img
-              className="w-full rounded-lg"
+              className="w-full h-full rounded-lg object-cover object-left-top"
               key={movie.id}
               src={`${imgUrl}${movie.poster_path}`}
               alt=""
