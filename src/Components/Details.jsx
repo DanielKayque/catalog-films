@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { api } from '../Services/GlobalAPI';
 import { useLocation, useParams } from 'react-router-dom';
-import Trending from './Trending';
-import NowPlaying from './NowPlaying';
-import Animations from './Animations';
 
 const { searchId, imgPosterUrl, imgUrl } = api;
 
