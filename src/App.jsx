@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Details from './Components/Details';
 import Footer from './Components/Footer';
 
-const BASE_PATH = "/catalog-films"
+const BASE_PATH = "/catalog-films/"
 
 const App = () => {
   return (
