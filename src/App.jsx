@@ -5,14 +5,16 @@ import Header from './Components/Header';
 import Details from './Components/Details';
 import Footer from './Components/Footer';
 
+const BASE_PATH = "/catalog-films"
+
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={BASE_PATH}>
         <Header />
         <Routes>
-          <Route path="/catalog-films/" element={<Home />} />
-          <Route path="/catalog-films/filme/:id" element={<Details />} />
+          <Route path="/" element={<Home />} />
+          <Route path="filme/:id" element={<Details />} />
         </Routes>
         <Footer />
       </BrowserRouter>
