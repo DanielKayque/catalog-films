@@ -37,13 +37,19 @@ const Animations = () => {
   return (
     <div className="flex w-svw mb-12 items-center px-8 justify-center gap-6">
       {menu.map((item) => (
-        <div className='relative  border-2 rounded-lg hover:scale-105 transition-all duration-200 shadow-xl shadow-black' key={item.logo}>
-          <img
-            src={item.logo}
-            className="w-full z-[1]"
-            alt="logo"
+        <div
+          className="relative w-auto border-2 rounded-lg hover:scale-105 transition-all duration-200 shadow-xl shadow-black"
+          key={item.logo}
+        >
+          <img src={item.logo} className="w-full z-[1]" alt="logo" />
+          <video
+            src={item.video}
+            type="video/mp4"
+            className="absolute w-full h-full top-0 left-0 opacity-0 hover:opacity-80 z-0 rounded-lg"
+            autoPlay
+            loop
+            muted
           />
-          <video src={item.video} type="video/mp4" className='absolute top-0 left-0 opacity-0 hover:opacity-80 z-0 rounded-lg' autoPlay loop muted/>
         </div>
       ))}
     </div>
