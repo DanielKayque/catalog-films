@@ -6,6 +6,7 @@ const Trending = () => {
   useEffect(() => {
     async function trendingsMovies() {
       const data = await api.movieTrendings();
+      console.debug('[Trending] api.movieTrendings response', data);
       setMovies(data.results);
     }
     trendingsMovies();

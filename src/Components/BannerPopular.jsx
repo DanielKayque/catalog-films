@@ -8,6 +8,7 @@ const BannerPopular = () => {
   useEffect(() => {
     async function popularMovies() {
       const data = await api.moviePopular();
+      console.debug('[BannerPopular] api.moviePopular response', data);
       setMovies(data.results);
     }
     popularMovies();
